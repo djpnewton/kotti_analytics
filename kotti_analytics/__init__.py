@@ -2,8 +2,7 @@ from pyramid.renderers import render
 
 from kotti.util import extract_from_settings
 from kotti.views.slots import register
-from kotti.views.slots import RenderRightSlot
-from kotti.views.slots import RenderLeftSlot
+from kotti.views.slots import RenderBelowContent
 
 ANALYTICS_WIDGET_DEFAULTS = {
     'tracking_id': '',
@@ -17,8 +16,5 @@ def render_analytics_widget(context, request, name=''):
     variables.update(extract_from_settings(prefix))
     return render('templates/analytics_widget.pt', variables)
 
-def include_widget(config, where=RenderRightSlot):
+def include_widget(config, where=RenderBelowContent):
     register(where, None, render_analytics_widget)
-
-def include_widget_left(config):
-    include_widget(config, RenderLeftSlot)
