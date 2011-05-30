@@ -6,7 +6,7 @@ from kotti.views.slots import RenderRightSlot
 from kotti.views.slots import RenderLeftSlot
 
 ANALYTICS_WIDGET_DEFAULTS = {
-    'id': '',
+    'tracking_id': '',
     }
 
 def render_analytics_widget(context, request, name=''):

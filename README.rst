@@ -17,10 +17,10 @@ right hand side, add ``kotti_analytics.include_widget`` to the
   kotti.includes = kotti_analytics.include_widget
 
 To set the analytics tracking id for the widget, set the
-``kotti_analytics.id`` variable.  An example::
+``kotti_analytics.tracking_id`` variable.  An example::
 
-  kotti_includes = kotti_analytics.include_widget
-  kotti_includes.include_widget.id = UA-XXXXXXX-X
+  kotti.includes = kotti_analytics.include_widget
+  kotti_analytics.tracking_id = UA-XXXXXXX-X
 
 Note that these settings have to be in your ``[app:Kotti]`` section.
 
